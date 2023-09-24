@@ -13,9 +13,9 @@ public class SpringSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         //All requests must be authenticated
-        http.authorizeHttpRequests(
-                auth -> auth.anyRequest().authenticated()
-        );
+        //http.authorizeHttpRequests(
+        //        auth -> auth.anyRequest().authenticated()
+        //);
         //If a req is not authenticated, a web page is
         http.httpBasic(withDefaults());
         //CSRF is disabled
